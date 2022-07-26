@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="main">
+            <h1 class="heading">Generate a <span id="random-password">random password</span></h1>
+            <h2 class="sub-heading">Never use an insecure password again.</h2>
+            <div id="control">
+                <div>
+                    <label for="password-length">
+                        Password Length:
+                    </label>
+                    <input value="8" name="password-length" id="password-length-el" type="number" min="0" max="100">       
+                </div>       
+                <div class="checkbox">
+                    <input name="uppercase" id="uppercase-el" type="checkbox" checked="checked">
+                    <label for="uppercase">
+                        Uppercase
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input name="lowercase" id="lowercase-el" type="checkbox" checked="checked">
+                    <label for="lowercase">
+                        Lowercase
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input name="numbers" id="numbers-el" type="checkbox" checked="checked">
+                    <label for="numbers">
+                        Numbers
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input name="symbols" id="symbols-el" type="checkbox" checked="checked">
+                    <label for="symbols">
+                        Symbols
+                    </label>
+                </div>            
+            </div>
+            <button class="btn" onclick="generatePasswords()">Generate Password</button>
+            <div id="password-generator">
+                <p id="password-1-el" class="password-field"></p>
+                <p id="password-2-el" class="password-field"></p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
